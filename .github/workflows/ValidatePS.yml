@@ -1,0 +1,17 @@
+# This ACTION validates the PowerShell scripts
+name: ValidatePS
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: lint
+      uses: devblackops/github-action-psscriptanalyzer@master
+      with:
+        sendComment: false 
