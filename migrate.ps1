@@ -10,9 +10,11 @@ $GHRepo = Read-Host 'Insert GitHub Repo name'
 
 # STEP 1: Make sure you have a local copy of all "old repo", branches and tags
 
-mkdir OLD_REPO
+$migrationFolder = "$AzDORepo-Migration"
 
-cd OLD_REPO
+mkdir $migrationFolder
+
+cd $migrationFolder
 
 $cloneUrl = "https://$AzDOPAT@dev.azure.com/$AzDOOrg/$AzDOPrj/_git/$AzDORepo"
 
