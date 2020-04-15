@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: lint
+    - name: Validate PowerShell
       uses: devblackops/github-action-psscriptanalyzer@master
       with:
         sendComment: false 
