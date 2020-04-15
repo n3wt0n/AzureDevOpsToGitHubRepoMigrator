@@ -6,7 +6,7 @@ $AzDORepo = Read-Host 'Insert Azure DevOps Repo name'
 Write-Host ' '
 Write-Host 'GITHUB PARAMS'
 $GHPAT = Read-Host 'Insert GitHub PAT'
-$GHUser = Read-Host 'Insert GitHub Usernname'
+$GHUser = Read-Host 'Insert GitHub Username'
 $GHRepo = Read-Host 'Insert GitHub Repo name'
 
 # STEP 1: Make sure you have a local copy of all "old repo", branches and tags
