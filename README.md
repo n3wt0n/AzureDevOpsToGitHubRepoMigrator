@@ -11,7 +11,7 @@ It will migrate ALL you have in your repository, including all the __branches__,
 
 There are 2 migration scripts:
 
-- migrateVerbose.ps1 - Interactive and Verbose
+- migrateVerbose.ps1 - _Interactive and Verbose_
 - migrate.ps1 - _Non Interactive_
 
 ### Interactive & Verbose
