@@ -7,6 +7,38 @@ Scripts to migrate a Git Repo from Azure DevOps to GitHub.
 
 It will migrate ALL you have in your repository, including all the __branches__, all the __tags__ and the __complete history__ of commits.
 
+## Usage
+
+There are 2 migration scripts:
+
+- migrateVerbose.ps1 - Interactive and Verbose
+  - interactive, it asks for the input in a nicer way
+  - it prints out the status of the migration
+  - ideal for manual migration
+- migrate.ps1 - _Non Interactive_
+  - non interactive, requires the parameters from the command line
+  - ideal for automated/scripted migrations
+
+### Interactive & Verbose
+
+The interactive verbose version of the migration, _migrateVerbose.ps1_, is ideal for __manual migrations__.
+
+It is interactive, it asks for the input in a nicer way, and it prints out the status of the migration.
+
+> NOTE: you need __both__ scripts, because _migrateVerbose.ps1_ uses _migrate.ps1_ to perform the actual migrations  
+
+### Non-interactive
+
+The non-interactive migration script, _migrate.ps1_, is instead ideal for __automated scripted migrations__
+
+To invoke it, use the following syntax:
+
+```PowerShell
+./migrate.ps1 -AzDOPAT <AZURE_DEVOPS_PAT> -AzDOOrg <AZURE_DEVOPS_ORGANIZATION> -AzDOPrj <AZURE_DEVOPS_PROJECT_NAME> -AzDORepo <AZURE_DEVOPS_REPOSITORY_NAME> -GHPAT <GITHUB_PAT> -GHUser <GITHUB_USERNAME> -GHRepo <GITHUB_REPOSITORY_NAME>
+```
+
+> Note: you need only the _migrate.ps1_ script
+
 ## Migration Steps
 
 The script will perform the migration in 4 steps:
