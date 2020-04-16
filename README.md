@@ -12,12 +12,7 @@ It will migrate ALL you have in your repository, including all the __branches__,
 There are 2 migration scripts:
 
 - migrateVerbose.ps1 - Interactive and Verbose
-  - interactive, it asks for the input in a nicer way
-  - it prints out the status of the migration
-  - ideal for manual migration
 - migrate.ps1 - _Non Interactive_
-  - non interactive, requires the parameters from the command line
-  - ideal for automated/scripted migrations
 
 ### Interactive & Verbose
 
