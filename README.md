@@ -32,7 +32,7 @@ To invoke it, use the following syntax:
 ./migrate.ps1 -AzDOPAT <AZURE_DEVOPS_PAT> -AzDOOrg <AZURE_DEVOPS_ORGANIZATION> -AzDOPrj <AZURE_DEVOPS_PROJECT_NAME> -AzDORepo <AZURE_DEVOPS_REPOSITORY_NAME> -GHPAT <GITHUB_PAT> -GHUser <GITHUB_USERNAME> -GHRepo <GITHUB_REPOSITORY_NAME>
 ```
 
-> Note: you need only the _migrate.ps1_ script
+> NOTE: you need only the _migrate.ps1_ script
 
 ## Migration Steps
 
