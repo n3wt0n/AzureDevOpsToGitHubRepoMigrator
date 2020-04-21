@@ -3,7 +3,7 @@ name: Validate PowerShell
 
 on:
   push:
-    branches: 
+    branches:
       - master
     paths:
       - '**.ps1'
@@ -15,9 +15,7 @@ jobs:
   validation:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Validate PowerShell
-      uses: devblackops/github-action-psscriptanalyzer@master
-      with:
-        sendComment: false 
+      - name: Validate PowerShell
+        uses: devblackops/github-action-psscriptanalyzer@master

@@ -1,12 +1,13 @@
+# This ACTION validates the YAML files
 name: Validate YAML
 
 on:
   push:
     branches:
       - master
-#    paths:
-#      - '**.yml'
-#      - '**.yaml'
+    paths:
+      - '**.yml'
+      - '**.yaml'
   pull_request:
     paths:
       - '**.yml'
