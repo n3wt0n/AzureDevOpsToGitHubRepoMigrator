@@ -17,8 +17,8 @@ There are 2 main ways to perform the migration:
   - Verbose or Silent
   - Check the [README](./Scripts/README.md) for more info
 - via __Docker container__:
-  - Create your own image or
-  - Use the "_official_" image on Docker Hub: [n3wt0n/azdo2ghrepomigrator](https://hub.docker.com/r/n3wt0n/azdo2ghrepomigrator)
+  - Use the "_official_" image on Docker Hub: [n3wt0n/azdo2ghrepomigrator](https://hub.docker.com/r/n3wt0n/azdo2ghrepomigrator), or
+  - Create your own image
   - Check the [README](./Docker/README.md) for more info
 
 ## Migration Steps
