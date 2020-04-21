@@ -20,16 +20,16 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Build the Container Image
-        run: docker build . --file ./Docker/Dockerfile --tag $DOCKERHUB_USERNAME/$IMAGE_NAME:$GITHUB_RUN_NUMBER
+        run: docker build . --file ./Docker/Dockerfile --tag $IMAGE_NAME
 
       - name: Extract image as Artifact
-        run: docker save --output $IMAGE_NAME.$GITHUB_RUN_NUMBER.tar $DOCKERHUB_USERNAME/$IMAGE_NAME:$GITHUB_RUN_NUMBER
+        run: docker save --output $IMAGE_NAME.tar $IMAGE_NAME
 
       - name: Publish image as Artifact
         uses: actions/upload-artifact@v1
         with:
           name: ContainerImage
-          path: $IMAGE_NAME.$GITHUB_RUN_NUMBER.tar
+          path: $IMAGE_NAME.tar
 
   # Push image to Docker Hub
   push:
@@ -50,13 +50,13 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
             
       - name: Tag the image with run number
-        run: docker tag $IMAGE_NAME:$GITHUB_RUN_NUMBER $DOCKERHUB_USERNAME/$IMAGE_NAME:$GITHUB_RUN_NUMBER
+        run: docker tag $IMAGE_NAME:$GITHUB_RUN_NUMBER ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$GITHUB_RUN_NUMBER
             
       - name: Tag the image with latest
-        run: docker tag $IMAGE_NAME:$GITHUB_RUN_NUMBER $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
+        run: docker tag $IMAGE_NAME:$GITHUB_RUN_NUMBER ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
         
       - name: Push image to Docker Hub (Run Number)
-        run: docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$GITHUB_RUN_NUMBER	
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$GITHUB_RUN_NUMBER	
         
       - name: Push image to Docker Hub (Latest)
-        run: docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
