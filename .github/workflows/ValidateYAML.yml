@@ -1,0 +1,22 @@
+name: Validate YAML
+
+on:
+  push:
+    branches: 
+      - master
+#    paths:
+#      - '**.yml'
+#      - '**.yaml'
+  pull_request: 
+    paths:
+      - '**.yml'
+      - '**.yaml'
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Validate YAML
+      uses: ibiqlik/action-yamllint@master
