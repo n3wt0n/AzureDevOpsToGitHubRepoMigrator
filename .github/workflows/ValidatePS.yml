@@ -1,5 +1,5 @@
 # This ACTION validates the PowerShell scripts
-name: ValidatePS
+name: Validate PowerShell
 
 on:
   push:
