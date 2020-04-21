@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '**.ps1'
+      - '**/Dockerfile'
 
 env:
   IMAGE_NAME: n3wt0n/azdo2ghrepomigrator
