@@ -7,6 +7,9 @@ on:
       - master
     paths:
       - '**.ps1'
+  pull_request:
+    paths:
+      - '**.ps1'
 
 jobs:
   validation:
