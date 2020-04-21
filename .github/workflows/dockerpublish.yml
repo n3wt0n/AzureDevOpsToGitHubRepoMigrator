@@ -44,7 +44,7 @@ jobs:
           name: ContainerImage
 
       - name: Restore image
-        run: docker load --input ContainerImage/$IMAGE_NAME.$GITHUB_RUN_NUMBER.tar
+        run: docker load --input ContainerImage/ExtractedImage.tar
 
       - name: Log into Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
