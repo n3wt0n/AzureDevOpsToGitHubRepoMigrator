@@ -23,13 +23,13 @@ jobs:
         run: docker build . --file ./Docker/Dockerfile --tag $IMAGE_NAME
 
       - name: Extract image as Artifact
-        run: docker save --output $IMAGE_NAME.tar $IMAGE_NAME
+        run: docker save --output ExtractedImage.tar $IMAGE_NAME
 
       - name: Publish image as Artifact
         uses: actions/upload-artifact@v1
         with:
           name: ContainerImage
-          path: $IMAGE_NAME.tar
+          path: ExtractedImage.tar
 
   # Push image to Docker Hub
   push:
