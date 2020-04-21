@@ -3,40 +3,26 @@
 ![ValidatePS](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/workflows/ValidatePS/badge.svg)
 [![License](https://img.shields.io/github/license/n3wt0n/AzureDevOpsToGitHubRepoMigrator.svg)](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/blob/master/LICENSE)
 
-Scripts to migrate a Git Repo from Azure DevOps to GitHub.
+Scripts (and container) to migrate a Git Repo from Azure DevOps to GitHub.
 
 It will migrate ALL you have in your repository, including all the __branches__, all the __tags__ and the __complete history__ of commits.
 
 ## Usage
 
-There are 2 migration scripts:
+There are 2 main ways to perform the migration:
 
-- migrateVerbose.ps1 - _Interactive and Verbose_
-- migrate.ps1 - _Non Interactive_
-
-### Interactive & Verbose
-
-The interactive verbose version of the migration, _migrateVerbose.ps1_, is ideal for __manual migrations__.
-
-It is interactive, it asks for the input in a nicer way, and it prints out the status of the migration.
-
-> NOTE: you need __both__ scripts, because _migrateVerbose.ps1_ uses _migrate.ps1_ to perform the actual migrations  
-
-### Non-interactive
-
-The non-interactive migration script, _migrate.ps1_, is instead ideal for __automated scripted migrations__
-
-To invoke it, use the following syntax:
-
-```PowerShell
-./migrate.ps1 -AzDOPAT <AZURE_DEVOPS_PAT> -AzDOOrg <AZURE_DEVOPS_ORGANIZATION> -AzDOPrj <AZURE_DEVOPS_PROJECT_NAME> -AzDORepo <AZURE_DEVOPS_REPOSITORY_NAME> -GHPAT <GITHUB_PAT> -GHUser <GITHUB_USERNAME> -GHRepo <GITHUB_REPOSITORY_NAME>
-```
-
-> NOTE: you need only the _migrate.ps1_ script
+- via __Scripts__
+  - Manually or Automated
+  - Verbose or Silent
+  - Check the [README](./Scripts/README.md) for more info
+- via __Docker container__:
+  - Create your own image or
+  - Use the "_official_" image on Docker Hub: [n3wt0n/azdo2ghrepomigrator](https://hub.docker.com/r/n3wt0n/azdo2ghrepomigrator)
+  - Check the [README](.Docker/README.md) for more info
 
 ## Migration Steps
 
-The script will perform the migration in 4 steps:
+The migrator will perform the migration in 4 steps:
 
 1. Make sure you have a local copy of all "old repo", branches and tags
   - Create a new folder (with name in the format "_AZUREDEVOPSREPONAME_-Migration")
@@ -48,7 +34,7 @@ The script will perform the migration in 4 steps:
 
 ## Prerequisites
 
-The script requires a series of prerequisites to work.
+Both the scripts and the containerized version require a series of prerequisites to work.
 
 ### Azure DevOps
 
@@ -69,7 +55,7 @@ For instruction on how to generate a PAT in Azure DevOps, take a look at the [of
 You need to know/have:
 
 - The GitHub __Username__ with which you have created the destinatio repository
-- The name of the GitHub __Destionation Repository__
+- The name of the GitHub __Destination Repository__
 
 > Please note that the Destination Repo ___must be empty and not be initialized___.
 
