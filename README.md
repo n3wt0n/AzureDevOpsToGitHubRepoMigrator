@@ -55,7 +55,7 @@ For instruction on how to generate a PAT in Azure DevOps, take a look at the [of
 
 You need to know/have:
 
-- The GitHub __Username__ with which you have created the destinatio repository
+- The GitHub __Username__ with which you have created the destination repository
 - The name of the GitHub __Destination Repository__
 
 > Please note that the Destination Repo ___must be empty and not be initialized___.
