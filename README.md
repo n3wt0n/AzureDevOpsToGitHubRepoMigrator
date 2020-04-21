@@ -3,7 +3,7 @@
 ![ValidatePS](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/workflows/ValidatePS/badge.svg)
 [![License](https://img.shields.io/github/license/n3wt0n/AzureDevOpsToGitHubRepoMigrator.svg)](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/blob/master/LICENSE)
 
-Scripts (and container) to migrate a Git Repo from Azure DevOps to GitHub.
+Utilities to migrate a Git Repo from Azure DevOps to GitHub.
 
 It will migrate ALL you have in your repository, including all the __branches__, all the __tags__ and the __complete history__ of commits.
 
@@ -18,7 +18,7 @@ There are 2 main ways to perform the migration:
 - via __Docker container__:
   - Create your own image or
   - Use the "_official_" image on Docker Hub: [n3wt0n/azdo2ghrepomigrator](https://hub.docker.com/r/n3wt0n/azdo2ghrepomigrator)
-  - Check the [README](.Docker/README.md) for more info
+  - Check the [README](./Docker/README.md) for more info
 
 ## Migration Steps
 
