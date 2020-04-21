@@ -13,15 +13,15 @@ It will migrate ALL you have in your repository, including all the __branches__,
 
 There are 3 main ways to perform the migration:
 
-- via __Scripts__
+- __Scripts__
   - Manually or Automated
   - Verbose or Silent
   - Check the [README](./Scripts/README.md) for more info
-- via __Docker container__:
+- __Docker container__
   - Use the "_official_" image on Docker Hub: [n3wt0n/azdo2ghrepomigrator](https://hub.docker.com/r/n3wt0n/azdo2ghrepomigrator), or
   - Create your own image
   - Check the [README](./Docker/README.md) for more info
-- via __Azure Container Instances__:
+- __Azure Container Instances__
   - Use the scripts i the [ACI folder](./ACI) to deploy to Azure ACI
   - Check the [README](./ACI/README.md) for more info
 
