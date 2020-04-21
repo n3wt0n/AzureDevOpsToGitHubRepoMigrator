@@ -1,0 +1,32 @@
+apiVersion: 2018-10-01
+location: eastus
+name: AzureDevOpsToGitHubRepoMigrator
+properties:
+  containers:
+  - name: migrator
+    properties:
+      environmentVariables:
+        - name: 'AZDOORG'
+          value: 'name of the Azure DevOps Organization where your source repository resides (the XXX in dev.azure.com/XXX or XXX.visualstudio.com)'
+        - name: 'AZDOPRJ'
+          value: 'name of the Azure DevOps Team Project where the source repository resides'
+        - name: 'AZDOREPO'
+          value: 'name of the Azure DevOps Source Repository to migrate'
+        - name: 'GHUSER'
+          value: 'GitHub Username with which you have created the destination repository'
+        - name: 'GHREPO'
+          value: 'name of the GitHub Destination Repository'
+        - name: 'AZDOPAT'
+          secureValue: 'my-secret-value'
+        - name: 'GHPAT'
+          secureValue: 'my-secret-value'
+      image: n3wt0n/azdo2ghrepomigrator
+      ports: []
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+  osType: Linux
+  restartPolicy: Always
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
