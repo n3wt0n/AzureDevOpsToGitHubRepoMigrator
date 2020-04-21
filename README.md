@@ -1,6 +1,7 @@
 # Azure DevOps To GitHub Repository Migrator
 
 ![ValidatePS](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/workflows/ValidatePS/badge.svg)
+![Docker CI/CD](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/workflows/Docker%20CI/CD/badge.svg)
 [![License](https://img.shields.io/github/license/n3wt0n/AzureDevOpsToGitHubRepoMigrator.svg)](https://github.com/n3wt0n/AzureDevOpsToGitHubRepoMigrator/blob/master/LICENSE)
 
 Utilities to migrate a Git Repo from Azure DevOps to GitHub.
