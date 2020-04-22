@@ -20,11 +20,21 @@ Write-Verbose "STARTING MIGRATION FROM $AzDOOrg/$AzDOPrj/$AzDORepo to $GHUser/$G
 # STEP 1: Make sure you have a local copy of all "old repo", branches and tags
 Write-Verbose 'Cloning Source Repo...'
 
+if ( -not (Test-Path -LiteralPath '/migration' -PathType Container) )
+{
+    # This means we didn't mount an external volume
+    Set-Location /
+
+    mkdir migration
+}
+
+Set-Location migration
+
 $migrationFolder = "$AzDORepo-Migration"
 
 mkdir $migrationFolder
 
-cd $migrationFolder
+Set-Location $migrationFolder
 
 $cloneUrl = "https://$AzDOPAT@dev.azure.com/$AzDOOrg/$AzDOPrj/_git/$AzDORepo"
 

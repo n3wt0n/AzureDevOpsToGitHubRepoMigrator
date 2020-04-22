@@ -9,8 +9,22 @@ This script, available as Windows Batch script and as Linux Bash script, uses th
 Firs step is to __replace the environment variables__ values in the _deploy-aci.yaml_ file with your ones (see below).
 
 Then just invoke:
+
 - Windows: deployToACI.bat
 - Linux / MacOS: deployToACI.sh
+
+### Bigger Repositories
+
+For big repositories (i.e. bigger than a few GBs) you probably want to use an external volume to store the migration files.  
+
+This repository contains the deployment files to use ACI with Azure Files, which uses the _deploy-aci-azurefiles.yaml_ definition.
+
+Other than the environment variables, you need to complete that file with your Azure File __file share name__, and the Azure Storage Account __name and key__.
+
+Then just invoke:
+
+- Windows: deployToACI-AzureFiles.bat
+- Linux / MacOS: deployToACI-AzureFiles.sh
 
 ## Prerequisites
 
@@ -34,3 +48,9 @@ Remember to change their values in the __deploy-aci.yaml_ file.
 > For instruction on how to generate a PAT in GitHub, take a look at the [official documentation here](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token)
 
 > Please note that the Destination Repo ___must be empty and not be initialized___.
+
+If you decide to use the external volume on __Azure Files__, you also need:
+
+- Azure File Share Name
+- Azure Storage Account Name
+- Azure Storage Account Key
