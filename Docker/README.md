@@ -26,7 +26,7 @@ If you instead prefer creating your own container image, follow these steps:
 
 1. Download or clone the whole repo
 2. Go to the "Docker" folder
-2. Launch the "_buildImage.bat_" or the "_buildImage.sh_" script to invoke the _docker build_ command
+3. Launch the "_buildImage.bat_" or the "_buildImage.sh_" script to invoke the _docker build_ command
 
 > If you prefer using the command manually against the _Dockerfile_ make sure you are executing it on the root of the repo
 

@@ -54,3 +54,5 @@ If you decide to use the external volume on __Azure Files__, you also need:
 - Azure File Share Name
 - Azure Storage Account Name
 - Azure Storage Account Key
+
+> Please note that the File Share __must be empty__ or ar least must not container a folder named "_AZUREDEVOPSREPONAME_-Migration"
