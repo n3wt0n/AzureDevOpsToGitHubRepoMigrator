@@ -27,6 +27,6 @@ properties:
             cpu: 1.0
             memoryInGB: 1.5
   osType: Linux
-  restartPolicy: Always
+  restartPolicy: OnFailure
 tags: null
 type: Microsoft.ContainerInstance/containerGroups

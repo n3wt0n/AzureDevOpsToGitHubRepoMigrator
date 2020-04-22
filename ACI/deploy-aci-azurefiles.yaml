@@ -30,7 +30,7 @@ properties:
           - mountPath: /migration/
             name: filesharevolume
   osType: Linux
-  restartPolicy: Always
+  restartPolicy: OnFailure
   volumes:
     - name: filesharevolume
       azureFile:
