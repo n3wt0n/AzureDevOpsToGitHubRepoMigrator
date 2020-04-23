@@ -1,6 +1,6 @@
 # DOCKER - Azure DevOps To GitHub Repository Migrator
 
-This is the containerized version of the migrator
+This is the containerized version of the migrator. It uses the [migrate-mirror.ps1](../Scripts/migrate-mirror.ps1) script.
 
 ## Usage
 

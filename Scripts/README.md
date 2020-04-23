@@ -4,10 +4,11 @@ The scripts to perform the migration.
 
 ## Usage
 
-There are 2 migration scripts:
+There are 3 migration scripts:
 
 - migrateVerbose.ps1 - _Interactive and Verbose_
 - migrate.ps1 - _Non Interactive_
+- migrate-mirror.ps1 - _Non Interactive_, ___Mirror___
 
 ### Interactive & Verbose
 
@@ -28,6 +29,18 @@ To invoke it, use the following syntax:
 ```
 
 > NOTE: you need only the _migrate.ps1_ script
+
+### Mirror
+
+This script uses the _--mirror_ flag for both the CLONE and the PULL operations.
+
+To invoke it, use the following syntax:
+
+```PowerShell
+./migrate-mirror.ps1 -AzDOPAT <AZURE_DEVOPS_PAT> -AzDOOrg <AZURE_DEVOPS_ORGANIZATION> -AzDOPrj <AZURE_DEVOPS_PROJECT_NAME> -AzDORepo <AZURE_DEVOPS_REPOSITORY_NAME> -GHPAT <GITHUB_PAT> -GHUser <GITHUB_USERNAME> -GHRepo <GITHUB_REPOSITORY_NAME>
+```
+
+> __WARNING: This script leaves the repository on the local folder in a non usable state__, meaning that it won't be possible to use it as a normal repository aka wokring copy
 
 ## Prerequisites
 
