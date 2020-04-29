@@ -39,7 +39,7 @@ The container needs the following environment variables (and values) to run.
 - __AZDOPRJ__: name of the Azure DevOps __Team Project__ where the source repository resides
 - __AZDOREPO__: name of the Azure DevOps __Source Repository__ to migrate
 - __GHPAT__: __PAT__ (Personal Access Token) in GitHub with the _repo (Full control)_ permmissions granted
-- __GHUSER__: GitHub __Username__ with which you have created the destination repository
+- __GHUSER__: GitHub __Username__ or (__Organization__) with which you have created the destination repository
 - __GHREPO__: name of the GitHub __Destination Repository__
 
 > For instruction on how to generate a PAT in Azure DevOps, take a look at the [official documentation here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-personal-access-tokens-to-authenticate-access)

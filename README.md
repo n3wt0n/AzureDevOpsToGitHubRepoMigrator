@@ -50,6 +50,7 @@ You need to know/have:
 - The name of the Azure DevOps __Source Repository__ to migrate (__because a single Team Project may contain multiple repositories__)
 
 You also need to generate a __PAT__ (Personal Access Token) in Azure DevOps with the following permissions:
+
 - Code
   - Read
 
@@ -59,12 +60,13 @@ For instruction on how to generate a PAT in Azure DevOps, take a look at the [of
 
 You need to know/have:
 
-- The GitHub __Username__ with which you have created the destination repository
+- The GitHub __Username__ or (__Organization__) with which you have created the destination repository
 - The name of the GitHub __Destination Repository__
 
 > Please note that the Destination Repo ___must be empty and not be initialized___.
 
 You also need to generate a __PAT__ (Personal Access Token) in GitHub with the following permissions:
+
 - repo (Full control)
 
 For instruction on how to generate a PAT in GitHub, take a look at the [official documentation here](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token)
