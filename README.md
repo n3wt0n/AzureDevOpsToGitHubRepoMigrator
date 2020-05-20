@@ -7,7 +7,13 @@
 
 Utilities to migrate a Git Repo from Azure DevOps to GitHub.
 
-It will migrate ALL you have in your repository, including all the __branches__, all the __tags__ and the __complete history__ of commits.
+It will migrate __ALL__ you have in your repository, including all the __branches__, all the __tags__ and the __complete history__ of commits.
+
+## Video
+
+If you want to see an in-depth explanation on how to migrate from Azure DevOps Repos to GitHub, check this video on YouTube:
+
+[![Migreate to GitHub](https://img.youtube.com/vi/SR0L6czMr1A/0.jpg)](https://www.youtube.com/watch?v=SR0L6czMr1A)
 
 ## Usage
 
