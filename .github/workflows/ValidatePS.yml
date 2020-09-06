@@ -19,3 +19,8 @@ jobs:
 
       - name: Validate PowerShell
         uses: devblackops/github-action-psscriptanalyzer@master
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          failOnErrors: true
+          failOnWarnings: false
+          failOnInfos: false
