@@ -38,7 +38,7 @@ Set-Location $migrationFolder
 
 $cloneUrl = "https://$AzDOPAT@dev.azure.com/$AzDOOrg/$AzDOPrj/_git/$AzDORepo"
 
-git clone --miror $cloneUrl .
+git clone --mirror $cloneUrl .
 
 # STEP 2: Add a "new repo" as a new remote origin:
 
